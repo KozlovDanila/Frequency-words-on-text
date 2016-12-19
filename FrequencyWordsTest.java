@@ -12,7 +12,7 @@ public class FrequencyWordsTest {
                 " such an element, no elements are removed from the array.";
         Map<String, Integer> map;
 
-        map = WordUtils.getMapWithEstimatedWords(text);
+        map = TextUtils.getMapWithEstimatedWords(text);
         Assert.assertTrue(map != null);
 
     }
@@ -22,7 +22,7 @@ public class FrequencyWordsTest {
         String text = "a, a, a, b, b, b, k";
         Map<String, Integer> map;
 
-        map = WordUtils.getMapWithEstimatedWords(text);
+        map = TextUtils.getMapWithEstimatedWords(text);
         Assert.assertTrue(map.get("a") == 3);
         Assert.assertTrue(map.get("k") == 1);
         Assert.assertTrue(map.containsKey("v") == false);
